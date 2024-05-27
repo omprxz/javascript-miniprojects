@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Stopwatch</title>
+        <style>
+           #main{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                top: 30%;
+                background: #000;
+                padding: 20px;
+                border-radius: 10px;
+            }
+           #timer{
+                text-align: center;
+                color: white;
+                margin-bottom: 20px;
+                font-size: 55px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            #ctrlBtns{
+                text-align: center;
+            }
+            #ctrlBtns button{
+                box-sizing: border-box;
+                padding: 10px 20px;
+                border-radius: 3px;
+                background: wheat;
+                border: 0;
+                outline: 0;
+                transition: all 0.3s;
+                margin: auto 8px;
+            }
+            #ctrlBtns button:hover{
+                background-color: lightgreen;
+                transform: scale(1.1);
+            }
+            #pause{
+              display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+      <h1 style="text-align:center;color:#ff5555;">Stopwatch</h1>
+            <div id="timer">00:00:00</div>
+            <div id="ctrlBtns">
+                <button id="start">Start</button>
+                <button id="pause">Pause</button>
+                <button id="end">End</button>
+            </div>
+        </div>
+
+        <script src="stopwatch.js"></script>
+    </body>
+</html>

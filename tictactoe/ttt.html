@@ -1,0 +1,71 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Tic Tac Toe</title>
+  <style type="text/css" media="all">
+   #main{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+   }
+   #gameCanvas{
+     display: grid;
+     grid-template-columns: repeat(3, auto);
+     margin: 20px auto;
+     border: 1px solid black;
+     padding: 0;
+   }
+   .cells{
+     display: flex;
+     border: 1px solid black;
+     width: 70px;
+     height: 70px;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     font-size: 40px;
+     font-family: Serif;
+     text-transform: uppercase;
+   }
+   #result{
+     font-weight: bold;
+     font-size: 25px;
+     font-family: Serif;
+   }
+   #start{
+     width: 100px;
+     padding: 10px;
+     margin: 20px auto;
+   }
+   #restart{
+     width: 100px;
+     padding: 10px;
+     margin: 20px auto;
+     display: none;
+   }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">Tic Tac Toe</h1>
+  <div id="main">
+    <div id="gameCanvas">
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+    </div>
+    <div id="result">Start Game</div>
+    <button id="start">Play</button>
+    <button id="restart">Restart</button>
+  </div>
+  
+  
+  <script src="ttt.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

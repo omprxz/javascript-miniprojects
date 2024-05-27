@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>
+            Snake Game
+        </title>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <style>
+        body{
+          background-color: white;
+        }
+            #gameContainer{
+                text-align: center;
+            }
+            #gameBoard{
+                border: 3px solid black;
+
+            }
+            #scoreText{
+                font-size: 30px;
+            }
+            #resetBtn,#startBtn{
+                width: 120px;
+                height: 40px;
+                border: 1px solid;
+                border-radius: 5px;
+                font-size: 14px;
+                cursor: pointer;
+                margin: 15px auto;
+            }
+            #resetBtn{
+              display: none;
+            }
+            .keys{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              gap: 20px;
+            }
+            .keys div{
+              display: flex;
+              justify-content: center;
+              gap: 20px;
+            }
+            .keys div button {
+              width: 90px;
+              height: 45px;
+            }
+        </style>
+    </head>
+    <body>
+      <h1 style="text-align:center;">Snake Game</h1>
+        <div id="gameContainer">
+            <canvas id="gameBoard" width="300" height="300"></canvas>
+            <div id="scoreText">0</div>
+        </div>
+        <div class="keys">
+          <div class="upper">
+            <button class="key" id="up" onclick="changeDirection('up')"><i class="fas fa-arrow-up"></i></button>
+          </div>
+          <div class="upper">
+            <button class="key" id="left" onclick="changeDirection('left')"><i class="fas fa-arrow-left"></i></button>
+            <button class="key" id="right" onclick="changeDirection('right')"><i class="fas fa-arrow-right"></i></button>
+          </div>
+          <div class="upper">
+            <button class="key" id="down" onclick="changeDirection('down')"><i class="fas fa-arrow-down"></i></button>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          
+            <button id="resetBtn" onclick="reset()">Reset Game</button> 
+            <button id="startBtn" onclick="startGame()">Start Game</button>
+
+        </div>
+
+
+  
+        <script src="snake.js"></script>
+        <script>
+    var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() }
+  </script>
+    </body>
+</html>

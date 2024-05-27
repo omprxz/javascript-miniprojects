@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>To Do List</title>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+      .inputs{
+        display: flex;
+        flex-wrap: nowrap;
+        height: 45px;
+      }
+      .inputs .inputTask{
+        width: 85%;
+        height: 100%;
+        border: 1.5px solid black;
+        outline: 0;
+        padding: 6px;
+      }
+      .inputs .addTask{
+        width: 15%;
+        height: 100%;
+        border: 1.5px solid black;
+        outline: 0;
+        background: tomato;
+      }
+      .tasks{
+        margin-top: 20px;
+      }
+      .tasks ul{
+        padding: 0;
+      }
+      .tasks ul li{
+        display: flex;
+        flex-wrap: nowrap;
+        height: 40px;
+        border: 1.5px solid black;
+        border-radius: 5px;
+        margin-bottom: 3px;
+        list-style: none;
+      }
+      .tasks ul li .task{
+        width: 75%;
+        padding-left: 6px;
+        display: flex;
+        align-items: center;
+      }
+      .tasks ul li .ctrlBtns{
+        width: calc(25%/2);
+        height: 100%;
+        border: 0.5px solid black;
+        outline: 0;
+        background: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align:center;">To Do List</h2>
+    <div class="main">
+      <div class="inputs">
+        <input type="text" class="inputTask" placeholder="New task">
+        <button class="addTask" onclick="createTask()"><i class="fas fa-plus"></i></button>
+      </div>
+      <div class="tasks">
+        <h3 style="text-align:center;">Tasks</h3>
+        <ul class="taskList">
+          
+        </ul>
+      </div>
+    </div>
+    
+    
+    <script>
+      var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() }
+    </script>
+    <script src="todo.js"></script>
+  </body>
+</html>
